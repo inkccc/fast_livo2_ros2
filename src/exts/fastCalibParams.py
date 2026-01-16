@@ -14,7 +14,7 @@ import sensor_msgs_py.point_cloud2 as pc2
 import time
 
 # ===== 静态配置参数 =====
-DEFAULT_CONFIG_PATH = "/home/inkc/inkc/mws/src/calib/FAST-Calib-ROS2/config/qr_params.yaml"
+DEFAULT_CONFIG_PATH = "/home/inkc/inkc/tws/fast_livo2_ros2/src/exts/calib/FAST-Calib-ROS2/config/qr_params.yaml"
 MAX_POINTS = 100000              # 最大点云点数
 VIS_WIDTH, VIS_HEIGHT = 800, 800  # 可视化窗口大小
 VIEW_FRONT = [0, -1, 0.3]        # 默认视角 front
