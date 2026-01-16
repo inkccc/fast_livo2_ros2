@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="mid360_driver">
+  <link name="livox_frame">
+    <visual>
+      <origin xyz="0 0 -0.045" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mid360_driver/meshes/livox_frame.STL"/>        
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.011 -0.02329 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mid360_driver/meshes/livox_frame.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="imu_frame">
+  </link>
+  <joint name="imu2lidar" type="fixed">
+    <origin xyz="0.011 0.02329 -0.04412" rpy="0 0 0"/>
+    <parent link="livox_frame"/>
+    <child link="imu_frame"/>
+  </joint>
+</robot>

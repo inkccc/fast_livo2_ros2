@@ -1,0 +1,36 @@
+ros2 launch realsense2_camera rs_launch.py \
+    enable_color:=true \
+    rgb_camera.color_profile:=640,480,30 \
+    rgb_camera.color_format:=RGB8 \
+    enable_depth:=true \
+    depth_module.depth_profile:=640,480,30 \
+    depth_module.depth_format:=Z16 \
+    enable_infra1:=true \
+    depth_module.infra1_profile:=640,480,30 \
+    depth_module.infra1_format:=Y8 \
+    enable_infra2:=true \
+    depth_module.infra2_profile:=640,480,30 \
+    depth_module.infra2_format:=Y8 \
+    enable_sync:=true \
+    align_depth.enable:=true \
+    pointcloud.enable:=true
+
+
+# FAST-LIVO2 calibration format
+cam_model: Pinhole
+cam_width: 640
+cam_height: 480
+scale: 1.0
+cam_fx: 598.993
+cam_fy: 599.107
+cam_cx: 333.441
+cam_cy: 244.164
+cam_d0: 0.0486055
+cam_d1: 0.412061
+cam_d2: -0.00173143
+cam_d3: 0.0004922
+
+Rcl: [  0.037680,  -0.999262,  -0.007445,
+        0.076252,   0.010304,  -0.997035,
+        0.996376,   0.037001,   0.076584]
+Pcl: [ -0.004102,  -0.138772,  -0.030806]
